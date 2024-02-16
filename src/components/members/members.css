@@ -1,0 +1,101 @@
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inputs-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.input {
+    color: black;
+    background-color: transparent;
+    width: calc(100% - 20px);
+    height: 10px;
+    padding: 10px 10px;
+    /* text-align: center; */
+    border: 1px solid black;
+    border-radius: 5px;
+    /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+    margin-bottom: 20px;
+}
+
+.input::placeholder {
+    color: grey;
+    opacity: 1;
+    /* Firefox */
+}
+
+
+.input:focus {
+    color: black;
+    background-color: white;
+    outline-color: rgb(0, 255, 255);
+    box-shadow: -0px -0px 5px rgb(0, 255, 255);
+    transition: .2s;
+    transition-property: box-shadow;
+}
+
+.select {
+    border: 1px solid black;
+    height: 32px;
+    padding: 0;
+    background-color: transparent;
+    color: black;
+    border-radius: 5px;
+}
+
+.select::placeholder {
+    color: black;
+    opacity: 1;
+    /* Firefox */
+}
+
+
+.add-member-btn{
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid #0492c2;
+    background-color: transparent;
+    color: #0492c2;
+    cursor: pointer;
+}
+
+.top-part{
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.member-item{
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.dashboard{
+    padding: 0px 0px;
+}
+
+
+.dashboard-item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 30px;
+    border: 1px solid red;
+    border-radius: 25px;
+    align-items: center;
+}
+
+.dashboard-item-property{
+    flex: 1;
+}
