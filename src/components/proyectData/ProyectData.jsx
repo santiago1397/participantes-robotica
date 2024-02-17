@@ -53,7 +53,7 @@ export default function ProyectData({
       <div className='inputs-wrapper spacing'>
         <div className="input-label">
           <label htmlFor="objective">
-            2. ¿De que forma su solución robótica resolverá el problema que establecieron?
+            2. ¿De que forma su solución resolverá el problema que establecieron?
           </label>
           <textarea 
           value={projectProblemSolving}

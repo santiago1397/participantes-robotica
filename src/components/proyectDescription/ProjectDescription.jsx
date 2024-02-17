@@ -65,22 +65,60 @@ export default function ProjectDescription({
       <div className='inputs-wrapper'>
         <div className="input-label">
           <label htmlFor="objective" className="bolding">
-            5. Área de interés del proyecto de robotica marque con una X:
+            5. Área de interés del proyecto. Seleccione:
           </label>
           <div>
           <input 
-          onClick={e => {updateFields({ projectPhasesDevelop: e.target.value });console.log(e)}}
-          type="checkbox" id="security" name="security" value="seguridad" />
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="security" name="interestArea" value="seguridad" />
           <label for="security"> Seguridad</label><br />
-          <input type="checkbox" id="industry" name="industry" value="industrial" />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="industry" name="interestArea" value="industrial" />
           <label for="industry"> Industrial</label><br />
-          <input type="checkbox" id="service" name="service" value="servicio" />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="service" name="interestArea" value="servicio" />
           <label for="service"> Servicio</label><br />
-          <input type="checkbox" id="health" name="health" value="salud" />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="health" name="interestArea" value="salud" />
           <label for="health"> Salud</label><br />
-          <input type="checkbox" id="academic" name="academic" value="academico" />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="academic" name="interestArea" value="academico" />
           <label for="academic"> Académico</label><br />
-          <input type="checkbox" id="other" name="other" value="otro" />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="Mecánica" name="interestArea" value="Mecánica" />
+          <label for="Mecánica"> Mecánica</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="Electricidad" name="interestArea" value="Electricidad" />
+          <label for="Electricidad"> Electricidad</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="ObrasCiviles" name="interestArea" value="Obras Civiles" />
+          <label for="ObrasCiviles"> Obras Civiles</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="Mecatrónica" name="interestArea" value="Mecatrónica" />
+          <label for="Mecatrónica"> Mecatrónica</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="Informática" name="interestArea" value="Informática" />
+          <label for="Informática"> Informática</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="Agroalimentaria" name="interestArea" value="Agroalimentaria" />
+          <label for="Agroalimentaria"> Agroalimentaria</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="Robótica" name="interestArea" value="Robótica" />
+          <label for="Robótica"> Robótica</label><br />
+          <input 
+          onClick={e => updateFields({ projectInterestArea: e.target.value })}
+          type="radio" id="other" name="interestArea" value="otro" />
           <label for="other"> Otro</label><br />
           </div>
         </div>

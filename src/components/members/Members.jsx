@@ -1,10 +1,10 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import './members.css'
 import { Modal, Typography, Button, Box, Tooltip, IconButton } from "@mui/material"
 import Form from './form/Form'
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function Members( members, setmembers) {
+export default function Members({ members, setmembers }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -35,7 +35,7 @@ export default function Members( members, setmembers) {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <Form />
+            <Form setmembers={setmembers} />
           </Box>
         </Modal>
       </div>
@@ -51,18 +51,28 @@ export default function Members( members, setmembers) {
       </div>
 
       <div className="dashboard">
-        <div className="dashboard-item">
-          <div className="dashboard-item-property">nombre</div>
-          <div className="dashboard-item-property">Apellido</div>
-          <div className="dashboard-item-property">Cédula</div>
-          <div className="dashboard-item-property">Edad</div>
-          <Tooltip >
-            <IconButton size='small' aria-label='action' onClick={handleOpen}>
-              <DeleteIcon fontSize='small' />
-            </IconButton>
-          </Tooltip>
-        </div>
-        
+        {members.map((item, index) => {
+          const number = index
+          return (
+            <div className="dashboard-item">
+              <div className="dashboard-item-property">{item.pNames}</div>
+              <div className="dashboard-item-property">{item.pLastNames}</div>
+              <div className="dashboard-item-property">{item.pci}</div>
+              <div className="dashboard-item-property">{item.page}</div>
+              {<Tooltip >
+                <IconButton size='small' aria-label='action' onClick={
+                  () => {
+                    setmembers((products) => products.filter((_, index) => index !== number));
+                  }}>
+                  <DeleteIcon fontSize='small' />
+                </IconButton>
+              </Tooltip>}
+            </div>
+          )
+
+        })}
+
+
       </div>
 
 

@@ -1,7 +1,10 @@
 import React from 'react'
 import './teaminfo.css'
 
-export default function TeamInfo() {
+export default function TeamInfo({
+  teamName,
+  updateFields
+}) {
   return (
     <div>
       <h1>
@@ -11,7 +14,10 @@ export default function TeamInfo() {
       <div className='inputs-wrapper'>
         <div className="input-label">
           <label htmlFor="nombres">Nombre del equipo de robótica:</label>
-          <input placeholder="Nombre" className="input" name="nombres" type="text" />
+          <input 
+          value={teamName}
+          onChange={e => updateFields({ teamName: e.target.value })}
+          placeholder="Nombre" className="input" name="nombres" type="text" />
         </div>
 
       </div>
