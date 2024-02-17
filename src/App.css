@@ -109,11 +109,11 @@ h1{
 /* END STEPPER CSS */
 
 
-.container{
+.content-container{
   margin: 10px 4em;
 }
 
-.formWrapper{
+.data-formWrapper{
   border:1px solid black;
   border-radius: 10px;
   padding: 10px;

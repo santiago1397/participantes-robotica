@@ -4,7 +4,7 @@ import { Modal, Typography, Button, Box, Tooltip, IconButton } from "@mui/materi
 import Form from './form/Form'
 import DeleteIcon from '@mui/icons-material/Delete';
 
-export default function Members() {
+export default function Members( members, setmembers) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -62,17 +62,7 @@ export default function Members() {
             </IconButton>
           </Tooltip>
         </div>
-        <div className="dashboard-item">
-          <div className="dashboard-item-property">nombre</div>
-          <div className="dashboard-item-property">Apellido</div>
-          <div className="dashboard-item-property">Cédula</div>
-          <div className="dashboard-item-property">Edad</div>
-          <Tooltip >
-            <IconButton size='small' aria-label='action' onClick={handleOpen}>
-              <DeleteIcon fontSize='small' />
-            </IconButton>
-          </Tooltip>
-        </div>
+        
       </div>
 
 

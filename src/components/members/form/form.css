@@ -88,3 +88,8 @@
 .with-select{
     justify-content: flex-start;
 }
+
+.center-button{
+    display: flex;
+    justify-content: center;
+}

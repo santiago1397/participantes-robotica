@@ -1,55 +1,76 @@
 import React from 'react'
 import './projectdescription.css'
 
-export default function ProjectDescription() {
+export default function ProjectDescription({
+  projectMaterials,
+  projectElectronics,
+  projectSoftware,
+  projectPhasesDevelop,
+  projectInterestArea,
+  updateFields
+}) {
   return (
     <div>
       <h1>
         Breve descripción de construcción del proyecto de robótica
       </h1>
-      <div className='inputs-wrapper'>
-        <div className="input-label">
-          <label htmlFor="objective bolding">
+      <div className='inputs-wrapper spacing'>
+        <div className="input-label bolding">
+          <label htmlFor="objective ">
             1. Materiales Utilizados:
           </label>
-          <textarea placeholder="" name="objective" type="text" />
+          <textarea 
+          value={projectMaterials}
+          onChange={e => updateFields({ projectMaterials: e.target.value })}
+          placeholder="" name="objective" type="text" rows={4} />
         </div>
       </div>
 
-      <div className='inputs-wrapper'>
+      <div className='inputs-wrapper spacing'>
         <div className="input-label bolding">
           <label htmlFor="objective">
             2. Dispositivos electrónicos y mecanismos implementados
           </label>
-          <textarea placeholder="" name="objective" type="text" />
+          <textarea 
+          value={projectElectronics}
+          onChange={e => updateFields({ projectElectronics: e.target.value })}
+          placeholder="" name="objective" type="text" rows={4}/>
         </div>
       </div>
 
-      <div className='inputs-wrapper'>
+      <div className='inputs-wrapper spacing'>
         <div className="input-label bolding">
           <label htmlFor="objective">
             3. Software y lenguaje de programación
           </label>
-          <textarea placeholder="" name="objective" type="text" />
+          <textarea 
+          value={projectSoftware}
+          onChange={e => updateFields({ projectSoftware: e.target.value })}
+          placeholder="" name="objective" type="text" rows={4}  />
         </div>
       </div>
 
-      <div className='inputs-wrapper'>
+      <div className='inputs-wrapper spacing'>
         <div className="input-label bolding">
           <label htmlFor="objective">
             4. Desarrollo de las etapas
           </label>
-          <textarea placeholder="" name="objective" type="text" />
+          <textarea 
+          value={projectPhasesDevelop}
+          onChange={e => updateFields({ projectPhasesDevelop: e.target.value })}
+          placeholder="" name="objective" type="text" rows={4} />
         </div>
       </div>
 
       <div className='inputs-wrapper'>
-        <div className="input-label bolding">
-          <label htmlFor="objective">
-            5. Área de interes del proyecto de robotica marque con una X:
+        <div className="input-label">
+          <label htmlFor="objective" className="bolding">
+            5. Área de interés del proyecto de robotica marque con una X:
           </label>
           <div>
-          <input type="checkbox" id="security" name="security" value="seguridad" />
+          <input 
+          onClick={e => {updateFields({ projectPhasesDevelop: e.target.value });console.log(e)}}
+          type="checkbox" id="security" name="security" value="seguridad" />
           <label for="security"> Seguridad</label><br />
           <input type="checkbox" id="industry" name="industry" value="industrial" />
           <label for="industry"> Industrial</label><br />

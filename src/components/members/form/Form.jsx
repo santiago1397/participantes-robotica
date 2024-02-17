@@ -22,26 +22,26 @@ export default function Form() {
           <input type="text" placeholder='Apellidos' name="apellidos" className="input" required />
         </div>
         <div className='inputs-wrapper'>
-          <input placeholder="Cédula" className="input" name="nombres" type="text" required />
-          <input type="text" placeholder='Edad' name="apellidos" className="input" required />
+          <input placeholder="Cédula" className="input" name="ci" type="text" required />
+          <input type="text" placeholder='Edad' name="age" className="input" required />
         </div>
 
         <div className='inputs-wrapper'>
           <div className="input-label">
-            <label htmlFor="nombres">Fecha de Nacimiento:</label>
-            <input placeholder="Nombres" className="input" name="nombres" type="date" />
+            <label htmlFor="datebirth">Fecha de Nacimiento:</label>
+            <input className="input" name="datebirth" type="date" />
           </div>
 
           <div className="input-label">
-            <label htmlFor="apellidos">Lugar de nacimiento:</label>
-            <input type="text" placeholder='' name="apellidos" className="input" />
+            <label htmlFor="placebirth">Lugar de nacimiento:</label>
+            <input type="text" name="placebirth" className="input" />
           </div>
         </div>
 
         <div className='inputs-wrapper'>
           <div className="input-label">
-            <label htmlFor="nombres">Dirección de Vivienda:</label>
-            <input placeholder="dirección" className="input" name="nombres" type="text" />
+            <label htmlFor="homeaddress">Dirección de Vivienda:</label>
+            <input placeholder="dirección" className="input" name="homeaddress" type="text" />
           </div>
         </div>
 
@@ -89,25 +89,38 @@ export default function Form() {
 
         <div className='inputs-wrapper'>
           <div className="input-label">
-            <label htmlFor="nombres">Nro. Teléfono Celular:</label>
-            <input type="text" placeholder='' name="apellidos" className="input" />
+            <label htmlFor="mobile-phone">Nro. Teléfono Celular:</label>
+            <input type="text" placeholder='' name="mobile-phone" className="input" />
           </div>
 
           <div className="input-label">
-            <label htmlFor="apellidos">Nro. Teléfono Hab:</label>
-            <input type="text" placeholder='' name="apellidos" className="input" />
+            <label htmlFor="phone">Nro. Teléfono Hab:</label>
+            <input type="text" placeholder='' name="phone" className="input" />
           </div>
         </div>
 
         <div className='inputs-wrapper'>
           <div className="input-label">
-            <label htmlFor="nombres">Plantel Educativo donde estudia:</label>
-            <input type="text" placeholder='' name="apellidos" className="input" />
+            <label htmlFor="institution">Plantel Educativo donde estudia:</label>
+            <input type="text" placeholder='' name="institution" className="input" />
           </div>
 
-          <div className="input-label">
-            <label htmlFor="apellidos">Grado o Año cursa:</label>
-            <input type="text" placeholder='' name="apellidos" className="input" />
+          <div className="input-label with-select">
+            <label htmlFor="grade">Grado o Año cursa:</label>
+            <select name="grade" id="grade" placeholder='' className="select" required>
+              <option value="1ero">1ero</option>
+              <option value="2do">2do</option>
+              <option value="3ero">3ero</option>
+              <option value="4to">4to</option>
+              <option value="5to">5to</option>
+              <option value="6to">6to</option>
+              <option value="7mo">7mo</option>
+              <option value="8vo">8vo</option>
+              <option value="9no">9no</option>
+              <option value="4 C. Div">4 C. Div</option>
+              <option value="5 C. Div">5 C. Div</option>
+              <option value="Universitario">Universitario</option>
+            </select>
           </div>
         </div>
 
@@ -163,8 +176,8 @@ export default function Form() {
 
 
         <div className="center-button">
-          <button className="button" type="submit" >
-            submit
+          <button className="next-button" type="submit" >
+            AÑADIR
           </button>
         </div>
       </form>

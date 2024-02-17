@@ -8,11 +8,68 @@ import ProyectData from './components/proyectData/ProyectData'
 import ProyectDescription from './components/proyectDescription/ProjectDescription'
 import Members from './components/members/Members'
 import ProyectFase from './components/proyecFase/ProyectFase'
+/* import { INITIAL_DATA } from './initialData'; */
 
 
 function App() {
-  const [teamMembers ,setTeamMembers] = useState([])
 
+   const INITIAL_DATA = {
+    teamName: "",
+
+
+    tutorLastNames: "",
+    tutorFirstNames: "",
+    tutorCi: "",
+    tutorHomeAddress: "",
+    tutorHomeState: "",
+    tutorHomeMunicipality: "",
+    tutorHomeParish: "",
+    tutorNumber: "",
+    tutorLocalNumber: "",
+    tutorEmail: "",
+    tutorFb: "",
+    tutorX: "",
+    tutorYt: "",
+    tutorIg: "",
+    tutorOtherSM: "",
+
+
+
+    projectTitle: "",
+    projectObjective: "",
+    projectProblem: "",
+    projectProblemSolving: "",
+    projectImportance: "",
+
+
+    projectMaterials: "",
+    projectElectronics: "",
+    projectSoftware: "",
+    projectPhasesDevelop: "",
+    projectInterestArea:"",
+
+
+    projectConceptDesign:"",
+    projectConceptDesignDetails:"",
+    projectElements:"",
+    projectElementsDetails:"",
+
+
+
+
+
+  }
+
+
+  
+  const [teamMembers ,setTeamMembers] = useState([])
+  const [data, setData] = useState(INITIAL_DATA)
+
+  function updateFields(fields) {
+    setData(prev => {
+      return { ...prev, ...fields }
+    })
+  }
 
   const titles = [
     "información de equipo",
@@ -25,12 +82,12 @@ function App() {
 
 
   const { currentStepIndex, step, steps, isFirstStep, isLastStep, next, back, } = useMultistepForm([
-    <TeamInfo/>,
-    <Tutor/>,
-    <Members/>,
-    <ProyectData/>,
-    <ProyectDescription/>,
-    <ProyectFase/>,
+    <TeamInfo {...data} updateFields={updateFields}/>,
+    <Tutor {...data} updateFields={updateFields}/>,
+    <Members members={teamMembers} setmembers={setTeamMembers}/>,
+    <ProyectData {...data} updateFields={updateFields}/>,
+    <ProyectDescription {...data} updateFields={updateFields}/>,
+    <ProyectFase {...data} updateFields={updateFields}/>,
     ])
 
 
@@ -60,7 +117,7 @@ function App() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="content-container">
 
         <div className="stepper-container">
           {steps?.map((step, i) => (
@@ -79,7 +136,7 @@ function App() {
   
 
 
-        <form className="formWrapper" onSubmit={onSubmit}>
+        <form className="data-formWrapper" onSubmit={onSubmit}>
         {step}
           <div className="button-wrapper">
             {!isFirstStep && (
