@@ -157,16 +157,7 @@ h1{
 
 
 .left-img{
-  width: 100%;
+  width:80%;
 }
 
 
-.logo-left{
-  max-width: 400px;
-  height: calc(10vh - 20px);
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}

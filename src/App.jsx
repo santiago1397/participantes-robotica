@@ -32,6 +32,11 @@ function App() {
     tutorYt: "",
     tutorIg: "",
     tutorOtherSM: "",
+    tutorInstitution: "",
+    tutorInstitutionAddress: "",
+    tutorInstitutionState: "",
+    tutorInstitutionMunicipality: "",
+    tutorInstitutionParish: "",
 
     projectTitle: "",
     projectObjective: "",
@@ -188,17 +193,18 @@ function App() {
       <div className="topTitle">
         <div className="logo-wrapper">
           <div className="logo logo-left">
-            <img className="left-img" src="cintillo.jpeg" alt="" />
+            <img className="left-img" src="logo mincyt2.png" alt="" />
           </div>
         </div>
 
         <h1>
-          Participantes de Proyectos Robótica
+          Participantes de proyectos de la Feria de Innovación "Semilleros Cientificos"
+
         </h1>
 
         <div className="logo-wrapper">
           <div className="logo">
-            <img className="right-img"  src="logo semilleros.png" alt="" />
+            <img className="right-img" src="logo semilleros.png" alt="" />
           </div>
         </div>
       </div>

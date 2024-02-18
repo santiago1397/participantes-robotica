@@ -21,6 +21,11 @@ export default function Form({ setmembers }) {
     pSchoolState: "",
     pSchoolMunicipality: "",
     pSchoolParish: "",
+    pParentName:"",
+    pParentLastName:"",
+    pParentCi:"",
+    pParentPhone:"",
+    pParentAddress: "",
     teamId: ""
   }
 
@@ -246,7 +251,7 @@ export default function Form({ setmembers }) {
             type="text" placeholder='' name="municipio" className="input" />
           </div>
 
-          <div className="input-label">
+          <div className="input-label spacing">
             <label htmlFor="parroquia">Parroquia:</label>
             <input 
             value={newMember.pSchoolParish}
@@ -255,6 +260,55 @@ export default function Form({ setmembers }) {
           </div>
         </div>
 
+        <div className="bolding">
+          Datos del representante (opcional):
+        </div>
+
+        <div className='inputs-wrapper'>
+          <div className="input-label">
+            <label htmlFor="nombres" className='bolding'>Nombres del Representante:</label>
+            <input 
+            value={newMember.pParentName}
+            onChange={e => updateFields({ pParentName: e.target.value })}
+            placeholder="dirección" className="input" name="nombres" type="text" />
+          </div>
+
+          <div className="input-label">
+            <label htmlFor="nombres" className='bolding'>Apellidos del Representante:</label>
+            <input 
+            value={newMember.pParentLastName}
+            onChange={e => updateFields({ pParentLastName: e.target.value })}
+            placeholder="dirección" className="input" name="nombres" type="text" />
+          </div>
+        </div>
+
+        <div className='inputs-wrapper'>
+          <div className="input-label">
+            <label htmlFor="nombres" className='bolding'>Cédula del representante:</label>
+            <input 
+            value={newMember.pParentCi}
+            onChange={e => updateFields({ pParentCi: e.target.value })}
+            placeholder="dirección" className="input" name="nombres" type="text" />
+          </div>
+
+          <div className="input-label">
+            <label htmlFor="nombres" className='bolding'>Teléfono del Representante:</label>
+            <input 
+            value={newMember.pParentPhone}
+            onChange={e => updateFields({ pParentPhone: e.target.value })}
+            placeholder="dirección" className="input" name="nombres" type="text" />
+          </div>
+        </div>
+
+        <div className='inputs-wrapper'>
+          <div className="input-label">
+            <label htmlFor="nombres" className='bolding'>Dirección del representante:</label>
+            <input 
+            value={newMember.pParentAddress}
+            onChange={e => updateFields({ pParentAddress: e.target.value })}
+            placeholder="dirección" className="input" name="nombres" type="text" />
+          </div>
+        </div>
 
         <div className="center-button">
           <button className="next-button" type="button" onClick={HandleSubmit}>

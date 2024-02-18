@@ -25,21 +25,21 @@ export default function ProyectFase({
             1. Diseño Conceptual del Proyecto:
           </label>
           <div>
-            <input 
-            onClick={e => {updateFields({ projectConceptDesign: e.target.value });console.log(e.target.value)}}
-            type="radio" id="1a" name="conceptDesign" value="Idea del Proyecto" />
+            <input
+              onClick={e => { updateFields({ projectConceptDesign: e.target.value }); console.log(e.target.value) }}
+              type="radio" id="1a" name="conceptDesign" value="Idea del Proyecto" />
             <label for="1a"> Idea del Proyecto</label><br />
-            <input 
-            onClick={e => updateFields({ projectConceptDesign: e.target.value })}
-            type="radio" id="2a" name="conceptDesign" value="Diseño de Proyecto" />
+            <input
+              onClick={e => updateFields({ projectConceptDesign: e.target.value })}
+              type="radio" id="2a" name="conceptDesign" value="Diseño de Proyecto" />
             <label for="2a"> Diseño de Proyecto</label><br />
-            <input 
-            onClick={e => updateFields({ projectConceptDesign: e.target.value })}
-            type="radio" id="3a" name="conceptDesign" value="Desarrollo de Prototipo" />
+            <input
+              onClick={e => updateFields({ projectConceptDesign: e.target.value })}
+              type="radio" id="3a" name="conceptDesign" value="Desarrollo de Prototipo" />
             <label for="3a"> Desarrollo de Prototipo</label><br />
-            <input 
-            onClick={e => updateFields({ projectConceptDesign: e.target.value })}
-            type="radio" id="4a" name="conceptDesign" value="Otro" />
+            <input
+              onClick={e => updateFields({ projectConceptDesign: e.target.value })}
+              type="radio" id="4a" name="conceptDesign" value="Otro" />
             <label for="4a"> Otro</label><br />
           </div>
         </div>
@@ -48,12 +48,12 @@ export default function ProyectFase({
       <div className='inputs-wrapper spacing'>
         <div className="input-label ">
           <label htmlFor="e1">
-            Especifique:
+            Describa:
           </label>
-          <textarea 
-          value={projectConceptDesignDetails}
-          onChange={e => updateFields({ projectConceptDesignDetails: e.target.value })}
-          placeholder="" name="e1" type="text" rows={4} />
+          <textarea
+            value={projectConceptDesignDetails}
+            onChange={e => updateFields({ projectConceptDesignDetails: e.target.value })}
+            placeholder="" name="e1" type="text" rows={4} />
         </div>
       </div>
 
@@ -94,12 +94,12 @@ export default function ProyectFase({
       <div className='inputs-wrapper spacing'>
         <div className="input-label ">
           <label htmlFor="e2">
-            Especifique:
+            Describa:
           </label>
-          <textarea 
-          value={projectElementsDetails}
-          onChange={e => updateFields({ projectElementsDetails: e.target.value })}
-          placeholder="" name="e2" type="text" rows={4} />
+          <textarea
+            value={projectElementsDetails}
+            onChange={e => updateFields({ projectElementsDetails: e.target.value })}
+            placeholder="" name="e2" type="text" rows={4} />
         </div>
       </div>
 

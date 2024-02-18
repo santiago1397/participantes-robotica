@@ -8,7 +8,7 @@ export default function TeamInfo({
   return (
     <div>
       <h1>
-      Identificación del equipo de robótica
+      Indentificacion de Proyecto
 
       </h1>
       <div className='inputs-wrapper'>

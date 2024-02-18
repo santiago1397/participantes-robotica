@@ -41,7 +41,7 @@ export default function Members({ members, setmembers }) {
       </div>
 
       <h1>
-        Integrantes del equipo de robótica
+        Integrantes del equipo
       </h1>
       <div className='inputs-wrapper top-part'>
         <div className="input-label">
