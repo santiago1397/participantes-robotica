@@ -8,6 +8,7 @@ import ProyectData from './components/proyectData/ProyectData'
 import ProyectDescription from './components/proyectDescription/ProjectDescription'
 import Members from './components/members/Members'
 import ProyectFase from './components/proyecFase/ProyectFase'
+import Media from './components/media/Media'
 import axios from 'axios'
 /* import { INITIAL_DATA } from './initialData'; */
 
@@ -76,6 +77,7 @@ function App() {
     "datos proyecto",
     "descripción",
     "fase del proyecto",
+    "anexos"
   ]
 
 
@@ -86,6 +88,7 @@ function App() {
     <ProyectData {...data} updateFields={updateFields} />,
     <ProyectDescription {...data} updateFields={updateFields} />,
     <ProyectFase {...data} updateFields={updateFields} />,
+    <Media/>
   ])
 
 

@@ -90,17 +90,7 @@ export default function ProjectDescription({
         </div>
       </div>
 
-      <div className='inputs-wrapper spacing'>
-        <div className="input-label bolding">
-          <label htmlFor="objective">
-            4. Desarrollo de las etapas
-          </label>
-          <textarea
-            value={projectPhasesDevelop}
-            onChange={e => updateFields({ projectPhasesDevelop: e.target.value })}
-            placeholder="" name="objective" type="text" rows={4} />
-        </div>
-      </div>
+
 
       <div className='inputs-wrapper'>
         <div className="input-label">

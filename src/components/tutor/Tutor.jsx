@@ -31,7 +31,7 @@ export default function Tutor({
   return (
     <div>
       <h1>
-        Tutor del proyecto de robótica
+        Tutor del proyecto 
       </h1>
       <div className='inputs-wrapper'>
         <div className="input-label">

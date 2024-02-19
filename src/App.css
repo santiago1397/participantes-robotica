@@ -23,8 +23,9 @@ h1{
 }
 
 .logo{
+  padding: 10px;
   max-width: 200px;
-  height: calc(10vh - 20px);
+  height: calc(10vh - 40px);
   background-color: white;
   display: flex;
   align-items: center;
@@ -152,12 +153,12 @@ h1{
 
 
 .right-img{
-  width: 60%;
+  height:130%;
 }
 
 
 .left-img{
-  width:80%;
+  height:100%;
 }
 
 

@@ -41,7 +41,7 @@ export default function ProyectData({
       <div className='inputs-wrapper spacing'>
         <div className="input-label">
           <label htmlFor="objective">
-            1. ¿Cuál es el proyecto que su proyecto resuelve?
+            1. ¿Cuál es el problema que su proyecto resuelve?
           </label>
           <textarea
             value={projectProblem}

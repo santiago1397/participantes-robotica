@@ -13,7 +13,7 @@ export default function TeamInfo({
       </h1>
       <div className='inputs-wrapper'>
         <div className="input-label">
-          <label htmlFor="nombres">Nombre del equipo de robótica:</label>
+          <label htmlFor="nombres">Nombre del equipo o proyecto:</label>
           <input 
           value={teamName}
           onChange={e => updateFields({ teamName: e.target.value })}
